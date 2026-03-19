@@ -60,6 +60,7 @@ A aplicação estará disponível em `http://localhost:3000`
 
 ## Estrutura de pastas
 
+```
 ├── src/
 │ ├── config/
 │ │ └── db.js
@@ -87,3 +88,4 @@ A aplicação estará disponível em `http://localhost:3000`
 ├── .gitignore
 ├── package.json
 └── README.md
+```
