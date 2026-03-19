@@ -1,0 +1,70 @@
+<div class="page-header">
+  <div>
+    <h1>Editar usuário</h1>
+    <p>Atualize os dados de {{user.name}} {{user.lastname}}.</p>
+  </div>
+  <a href="/users/{{user._id}}" class="btn-ghost">← voltar</a>
+</div>
+
+<div class="card">
+  <form action="/users/{{user._id}}?_method=PUT" method="POST" novalidate>
+
+    <div class="grid-2">
+      <div class="field">
+        <label for="name">Nome</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Ex.: João"
+          value="{{user.name}}"
+          required
+        />
+      </div>
+
+      <div class="field">
+        <label for="lastname">Sobrenome</label>
+        <input
+          type="text"
+          id="lastname"
+          name="lastname"
+          placeholder="Ex.: Silva"
+          value="{{user.lastname}}"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="occupation">Ocupação</label>
+      <input
+        type="text"
+        id="occupation"
+        name="occupation"
+        placeholder="Ex.: Desenvolvedor"
+        value="{{user.occupation}}"
+        required
+      />
+    </div>
+
+    <div class="field">
+      <label for="age">Idade</label>
+      <input
+        type="number"
+        id="age"
+        name="age"
+        placeholder="Ex.: 25"
+        value="{{user.age}}"
+        min="1"
+        max="120"
+        required
+      />
+    </div>
+
+    <div class="form-actions">
+      <a href="/users/{{user._id}}" class="btn-ghost">Cancelar</a>
+      <button type="submit" class="btn-primary">Salvar alterações</button>
+    </div>
+
+  </form>
+</div>
