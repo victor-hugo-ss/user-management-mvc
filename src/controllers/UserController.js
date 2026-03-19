@@ -41,6 +41,12 @@ module.exports = class UserController {
     res.redirect("/users");
   }
 
+  static async deleteUser(req, res) {
+    const id = req.body.id;
+    await User.destroy({ where: { id: id } });
+    res.redirect("/users");
+  }
+
   static async viewDetailsUser(req, res) {
     const id = req.params.id;
     const user = await User.findOne({ raw: true, where: { id: id } });

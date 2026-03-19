@@ -43,10 +43,11 @@
     <p class="danger-desc">Esta ação não pode ser desfeita.</p>
   </div>
   <form
-    action="/users/delete/{{user._id}}?_method=DELETE"
+    action="/delete"
     method="POST"
     onsubmit="return confirm('Excluir {{user.name}}?')"
   >
+    <input type="hidden" name="id" value="{{user.id}}" />
     <button type="submit" class="btn-danger">Excluir</button>
   </form>
 </div>
