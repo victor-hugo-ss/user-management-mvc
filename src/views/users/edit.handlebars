@@ -7,7 +7,8 @@
 </div>
 
 <div class="card">
-  <form action="/users/{{user._id}}?_method=PUT" method="POST" novalidate>
+  <form action="/edit" method="POST" novalidate>
+    <input type="hidden" name="id" value="{{user.id}}" />
 
     <div class="grid-2">
       <div class="field">
