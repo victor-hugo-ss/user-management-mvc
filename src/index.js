@@ -6,6 +6,9 @@ const exphbs = require("express-handlebars");
 const conn = require("./config/db");
 const PORT = process.env.PORT;
 
+const User = require("../src/models/User");
+const UserRoutes = require("../src/routes/usersRoutes");
+
 // Express
 const app = express();
 app.use(express.json());
@@ -17,6 +20,8 @@ app.set("view engine", "handlebars");
 app.set("views", "./src/views");
 
 app.use(express.static(path.join(__dirname, "public")));
+
+app.use("/users", UserRoutes);
 
 conn
   .sync()
