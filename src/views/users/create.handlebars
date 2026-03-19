@@ -1,1 +1,70 @@
-<h1>Cadastrar usuário:</h1>
+<div class="page-header">
+  <div>
+    <h1>Novo usuário</h1>
+    <p>Preencha os dados para cadastrar um novo usuário.</p>
+  </div>
+  <a href="/users" class="btn-ghost">← voltar</a>
+</div>
+
+<div class="card">
+  <form action="/users" method="POST" novalidate>
+
+    <div class="grid-2">
+      <div class="field">
+        <label for="name">Nome</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Ex.: João"
+          value="{{user.name}}"
+          required
+        />
+      </div>
+
+      <div class="field">
+        <label for="lastname">Sobrenome</label>
+        <input
+          type="text"
+          id="lastname"
+          name="lastname"
+          placeholder="Ex.: Silva"
+          value="{{user.lastname}}"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="occupation">Ocupação</label>
+      <input
+        type="text"
+        id="occupation"
+        name="occupation"
+        placeholder="Ex.: Desenvolvedor"
+        value="{{user.occupation}}"
+        required
+      />
+    </div>
+
+    <div class="field">
+      <label for="age">Idade</label>
+      <input
+        type="number"
+        id="age"
+        name="age"
+        placeholder="Ex.: 25"
+        value="{{user.age}}"
+        min="1"
+        max="120"
+        required
+      />
+    </div>
+
+    <div class="form-actions">
+      <a href="/users" class="btn-ghost">Cancelar</a>
+      <button type="submit" class="btn-primary">Cadastrar</button>
+    </div>
+
+  </form>
+</div>

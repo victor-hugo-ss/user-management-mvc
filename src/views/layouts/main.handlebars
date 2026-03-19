@@ -1,21 +1,33 @@
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <title>Sistema</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
 
-    <header>
-      <h1>Sistema de Usuários</h1>
-    </header>
+    <nav>
+      <a href="/" class="brand">⬡ userbase</a>
+      <ul>
+        <li><a href="/">início</a></li>
+        <li><a href="/users">usuários</a></li>
+      </ul>
+      <a href="/add" class="cta">+ novo usuário</a>
+    </nav>
 
     <main>
       {{{body}}}
     </main>
 
     <footer>
-      <p>© 2026</p>
+      <span>userbase &copy; {{year}}</span>
+      <span>feito com Node.js</span>
     </footer>
 
   </body>

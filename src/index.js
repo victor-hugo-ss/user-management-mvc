@@ -21,7 +21,7 @@ app.set("views", "./src/views");
 
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/users", UserRoutes);
+app.use("/", UserRoutes);
 
 conn
   .sync()
