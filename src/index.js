@@ -1,4 +1,5 @@
 require("dotenv").config();
+const path = require("path");
 const express = require("express");
 const exphbs = require("express-handlebars");
 
@@ -14,6 +15,8 @@ app.use(express.urlencoded({ extended: true }));
 app.engine("handlebars", exphbs.engine());
 app.set("view engine", "handlebars");
 app.set("views", "./src/views");
+
+app.use(express.static(path.join(__dirname, "public")));
 
 conn
   .sync()
