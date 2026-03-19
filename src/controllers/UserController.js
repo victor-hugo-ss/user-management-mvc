@@ -54,7 +54,7 @@ module.exports = class UserController {
   }
 
   static homeUser(req, res) {
-    res.render("users/home");
+    res.render("home");
   }
 
   static async showUser(req, res) {
