@@ -1,0 +1,52 @@
+<div class="page-header">
+  <div>
+    <h1>{{user.name}} {{user.lastname}}</h1>
+    <p>Detalhes do usuário</p>
+  </div>
+  <div class="header-actions">
+    <a href="/users" class="btn-ghost">← voltar</a>
+    <a href="/users/edit/{{user._id}}" class="btn-primary">Editar</a>
+  </div>
+</div>
+
+<div class="card">
+  <div class="detail-grid">
+
+    <div class="detail-item">
+      <span class="detail-label">Nome</span>
+      <span class="detail-value">{{user.name}}</span>
+    </div>
+
+    <div class="detail-item">
+      <span class="detail-label">Sobrenome</span>
+      <span class="detail-value">{{user.lastname}}</span>
+    </div>
+
+    <div class="detail-item">
+      <span class="detail-label">Ocupação</span>
+      <span class="detail-value"><span
+          class="badge"
+        >{{user.occupation}}</span></span>
+    </div>
+
+    <div class="detail-item">
+      <span class="detail-label">Idade</span>
+      <span class="detail-value">{{user.age}} anos</span>
+    </div>
+
+  </div>
+</div>
+
+<div class="danger-zone">
+  <div>
+    <p class="danger-title">Excluir usuário</p>
+    <p class="danger-desc">Esta ação não pode ser desfeita.</p>
+  </div>
+  <form
+    action="/users/delete/{{user._id}}?_method=DELETE"
+    method="POST"
+    onsubmit="return confirm('Excluir {{user.name}}?')"
+  >
+    <button type="submit" class="btn-danger">Excluir</button>
+  </form>
+</div>
