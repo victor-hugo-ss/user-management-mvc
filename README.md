@@ -41,6 +41,16 @@ cd user-management-mvc.git
 npm install
 ```
 
+### 3. Configure o banco de dados
+
+Certifique-se que o MySQL está rodando e crie o banco de dados:
+
+```sql
+CREATE DATABASE userbase;
+```
+
+> O Sequelize criará as tabelas automaticamente ao iniciar a aplicação.
+
 ### 3. Configure as variáveis de ambiente
 
 Crie um arquivo `.env` na raiz do projeto baseado no `.env.example`:
