@@ -51,7 +51,7 @@ CREATE DATABASE userbase;
 
 > O Sequelize criará as tabelas automaticamente ao iniciar a aplicação.
 
-### 3. Configure as variáveis de ambiente
+### 4. Configure as variáveis de ambiente
 
 Crie um arquivo `.env` na raiz do projeto baseado no `.env.example`:
 
@@ -70,7 +70,7 @@ DB_USER=seu_usuario
 DB_PASS=sua_senha
 ```
 
-### 4. Inicie a aplicação
+### 5. Inicie a aplicação
 
 ```bash
 npm run dev
