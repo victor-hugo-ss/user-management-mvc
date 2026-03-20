@@ -1,91 +1,101 @@
 # Userbase
 
-Aplicação web para gerenciamento de usuários desenvolvida com Node.js e Express.
+Aplicação web para gerenciamento de usuários desenvolvida com Node.js, Express e MySQL.
 
 ## Tecnologias
 
-- Node.js
-- Express
-- MySQL2
-- Sequelize
-- Express-Handlebars
-- Nodemon
-- Prettier
-- Dotenv
+- [Node.js](https://nodejs.org/)
+- [Express](https://expressjs.com/)
+- [MySQL2](https://www.npmjs.com/package/mysql2)
+- [Sequelize](https://sequelize.org/)
+- [Express-Handlebars](https://www.npmjs.com/package/express-handlebars)
+- [Dotenv](https://www.npmjs.com/package/dotenv)
+- [Nodemon](https://nodemon.io/)
+- [Prettier](https://prettier.io/)
 
 ## Funcionalidades
 
-- Cadastrar usuário
-- Listar usuários
-- Ver detalhes do usuário
-- Editar usuário
-- Excluir usuário
+- ✅ Cadastrar usuário
+- ✅ Listar usuários
+- ✅ Ver detalhes do usuário
+- ✅ Editar usuário
+- ✅ Excluir usuário
+
+## Pré-requisitos
+
+- [Node.js](https://nodejs.org/) instalado
+- [MySQL](https://www.mysql.com/) instalado e rodando
 
 ## Como executar
 
-### Pré-requisitos
+### 1. Clone o repositório
 
-- Node.js instalado
-- MySQL instalado e rodando
-
-### Instalação
-
-# Clone o repositório
-
+```bash
 git clone https://github.com/seu-usuario/seu-repositorio.git
-
-# Entre na pasta
-
 cd seu-repositorio
+```
 
-# Instale as dependências
+### 2. Instale as dependências
 
+```bash
 npm install
+```
 
-### Configuração
+### 3. Configure as variáveis de ambiente
 
-Crie um arquivo `.env` na raiz do projeto com as seguintes variáveis:
+Crie um arquivo `.env` na raiz do projeto baseado no `.env.example`:
 
+```bash
+cp .env.example .env
+```
+
+Preencha as variáveis:
+
+```env
+PORT=3000
 DB_HOST=localhost
 DB_PORT=3306
 DB_NAME=userbase
 DB_USER=seu_usuario
 DB_PASS=sua_senha
+```
 
-### Inicie a aplicação
+### 4. Inicie a aplicação
 
+```bash
 npm start
+```
 
-A aplicação estará disponível em `http://localhost:3000`
+Acesse em [http://localhost:3000](http://localhost:3000)
 
 ## Estrutura de pastas
 
 ```
-├── src/
-│ ├── config/
-│ │ └── db.js
-│ ├── controllers/
-│ │ └── UserController.js
-│ ├── models/
-│ │ └── User.js
-│ ├── public/
-│ │ └── css/
-│ │ └── style.css
-│ ├── routes/
-│ │ └── usersRoutes.js
-│ ├── views/
-│ │ ├── layouts/
-│ │ │ └── main.handlebars
-│ │ ├── users/
-│ │ │ ├── all.handlebars
-│ │ │ ├── create.handlebars
-│ │ │ ├── edit.handlebars
-│ │ │ ├── home.handlebars
-│ │ │ └── user.handlebars
-│ └── index.js
-├── .env
-├── .env.example
-├── .gitignore
-├── package.json
-└── README.md
+├── 📁 src
+│   ├── 📁 config
+│   │   └── 📄 db.js
+│   ├── 📁 controllers
+│   │   └── 📄 UserController.js
+│   ├── 📁 models
+│   │   └── 📄 User.js
+│   ├── 📁 public
+│   │   └── 📁 css
+│   │       └── 🎨 style.css
+│   ├── 📁 routes
+│   │   └── 📄 usersRoutes.js
+│   ├── 📁 views
+│   │   ├── 📁 layouts
+│   │   │   └── 📄 main.handlebars
+│   │   ├── 📁 users
+│   │   │   ├── 📄 all.handlebars
+│   │   │   ├── 📄 create.handlebars
+│   │   │   ├── 📄 edit.handlebars
+│   │   │   └── 📄 user.handlebars
+│   │   └── 📄 home.handlebars
+│   └── 📄 index.js
+├── ⚙️ .env.example
+├── ⚙️ .gitignore
+├── 📝 README.md
+├── ⚙️ package-lock.json
+└── ⚙️ package.json
 ```
