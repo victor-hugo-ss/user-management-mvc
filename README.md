@@ -31,8 +31,8 @@ Aplicação web para gerenciamento de usuários desenvolvida com Node.js, Expres
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+git clone hhttps://github.com/victor-hugo-ss/user-management-mvc.git
+cd user-management-mvc.git
 ```
 
 ### 2. Instale as dependências
@@ -63,7 +63,7 @@ DB_PASS=sua_senha
 ### 4. Inicie a aplicação
 
 ```bash
-npm start
+npm run dev
 ```
 
 Acesse em [http://localhost:3000](http://localhost:3000)
